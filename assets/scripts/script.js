@@ -1,5 +1,10 @@
 let question = prompt("Введите Ваше имя");
-alert("Меня зовут " + question);
+function out(){
+    let answer = "Меня зовут " + question;
+    alert(answer);
+}
+
+out();
 
 let age = parseInt(prompt("Введите Ваш возраст"));
 switch(age) {
@@ -20,3 +25,20 @@ switch(age) {
         break;
     }
 }
+
+
+function changedColor (){
+    let element = document.getElementById("el");
+    let check = document.getElementById("li");
+    console.log(element);
+    element.classList.toggle("color");
+    element.textContent =  element.textContent == "Какой чудесный день!" 
+    ? "Работать мне не лень))" : "Какой чудесный день!";
+    check.classList.toggle("change");
+    console.log(check);
+}
+
+
+let button = document.getElementById("btn");
+console.log(button);
+button.addEventListener('click', changedColor);
